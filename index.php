@@ -20,17 +20,21 @@ get_header(); ?>
             <div class="container">
                 <div class="row">
                     <?php
+                    // If there are any posts
                     if (have_posts()):
+
+                        // Load posts loop
                         while (have_posts()): the_post();
-                    ?>
-                            <article class="col">
-                                <h2><?php the_title(); ?></h2>
-                                <div><?php the_content(); ?></div>
-                            </article>
-                        <?php endwhile;
+                            get_template_part( 'template-parts/content' );
+                        endwhile;
+                        		// We're using numeric page navigation here.
+								the_posts_pagination( array(
+									'prev_text'		=> 'Previous',
+									'next_text'		=> 'Next',
+								));
                     else:
                         ?>
-                        <p>Nothing to display </p>
+                        <p>Nothing to display.</p>
                     <?php endif; ?>
                 </div>
             </div>
