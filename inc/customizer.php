@@ -12,8 +12,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 	$wp_customize->add_section(
 		'sec_copyright', array(
-			'title'			=> 'Copyright Settings',
-			'description'	=> 'Copyright Section'
+			'title'			=> __( 'Copyright Settings', 'woocommerce-lab' ),
+			'description'	=> __( 'Copyright Section', 'woocommerce-lab' )
 		)
 	);
 
@@ -28,8 +28,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_copyright', array(
-					'label'			=> 'Copyright',
-					'description'	=> 'Please, add your copyright information here',
+					'label'			=> __( 'Copyright', 'woocommerce-lab' ),
+					'description'	=> __( 'Please, add your copyright information here', 'woocommerce-lab' ),
 					'section'		=> 'sec_copyright',
 					'type'			=> 'text'
 				)
@@ -40,8 +40,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 	$wp_customize->add_section(
 		'sec_slider', array(
-			'title'			=> 'Slider Settings',
-			'description'	=> 'Slider Section'
+			'title'			=> __( 'Slider Settings', 'woocommerce-lab' ),
+			'description'	=> __( 'Slider Section', 'woocommerce-lab' )
 		)
 	);	
 
@@ -57,8 +57,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_page1', array(
-					'label'			=> 'Set slider page 1',
-					'description'	=> 'Set slider page 1',
+				    'label'			=> __( 'Set slider page 1', 'woocommerce-lab' ),
+					'description'	=> __( 'Set slider page 1', 'woocommerce-lab' ),
 					'section'		=> 'sec_slider',
 					'type'			=> 'dropdown-pages'
 				)
@@ -76,8 +76,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_button_text1', array(
-					'label'			=> 'Button Text for Page 1',
-					'description'	=> 'Button Text for Page 1',
+					'label'			=> __( 'Button Text for Page 1', 'woocommerce-lab' ),
+					'description'	=> __( 'Button Text for Page 1', 'woocommerce-lab' ),
 					'section'		=> 'sec_slider',
 					'type'			=> 'text'
 				)
@@ -95,8 +95,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_button_url1', array(
-					'label'			=> 'URL for Page 1',
-					'description'	=> 'URL for Page 1',
+					'label'			=> __( 'URL for Page 1', 'woocommerce-lab' ),
+					'description'	=> __( 'URL for Page 1', 'woocommerce-lab' ),
 					'section'		=> 'sec_slider',
 					'type'			=> 'url'
 				)
@@ -116,8 +116,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_page2', array(
-					'label'			=> 'Set slider page 2',
-					'description'	=> 'Set slider page 2',
+					'label'			=> __( 'Set slider page 2', 'woocommerce-lab' ),
+					'description'	=> __( 'Set slider page 2', 'woocommerce-lab' ),
 					'section'		=> 'sec_slider',
 					'type'			=> 'dropdown-pages'
 				)
@@ -135,8 +135,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_button_text2', array(
-					'label'			=> 'Button Text for Page 2',
-					'description'	=> 'Button Text for Page 2',
+					'label'			=> __( 'Button Text for Page 2', 'woocommerce-lab' ),
+					'description'	=> __( 'Button Text for Page 2', 'woocommerce-lab' ),
 					'section'		=> 'sec_slider',
 					'type'			=> 'text'
 				)
@@ -154,8 +154,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_button_url2', array(
-					'label'			=> 'URL for Page 2',
-					'description'	=> 'URL for Page 2',
+					'label'			=> __( 'URL for Page 2', 'woocommerce-lab' ),
+					'description'	=> __( 'URL for Page 2', 'woocommerce-lab' ),
 					'section'		=> 'sec_slider',
 					'type'			=> 'url'
 				)
@@ -175,8 +175,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_page3', array(
-					'label'			=> 'Set slider page 3',
-					'description'	=> 'Set slider page 3',
+					'label'			=> __( 'Set slider page 3', 'woocommerce-lab' ),
+					'description'	=> __( 'Set slider page 3', 'woocommerce-lab' ),
 					'section'		=> 'sec_slider',
 					'type'			=> 'dropdown-pages'
 				)
@@ -194,8 +194,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_button_text3', array(
-					'label'			=> 'Button Text for Page 3',
-					'description'	=> 'Button Text for Page 3',
+					'label'			=> __( 'Button Text for Page 3', 'woocommerce-lab' ),
+					'description'	=> __( 'Button Text for Page 3', 'woocommerce-lab' ),
 					'section'		=> 'sec_slider',
 					'type'			=> 'text'
 				)
@@ -213,8 +213,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_slider_button_url3', array(
-					'label'			=> 'URL for Page 3',
-					'description'	=> 'URL for Page 3',
+					'label'			=> __( 'URL for Page 3', 'woocommerce-lab' ),
+					'description'	=> __( 'URL for Page 3', 'woocommerce-lab' ),
 					'section'		=> 'sec_slider',
 					'type'			=> 'url'
 				)
@@ -225,8 +225,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 	$wp_customize->add_section(
 		'sec_home_page', array(
-			'title'			=> 'Home Page Products and Blog Settings',
-			'description'	=> 'Home Page Section'
+			'title'			=> __( 'Home Page Products and Blog Settings', 'woocommerce-lab' ),
+			'description'	=> __( 'Home Page Section', 'woocommerce-lab' )
 		)
 	);	
 
@@ -241,8 +241,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_popular_title', array(
-					'label' 		=> 'Popular Products Title',
-					'description' 	=> 'Popular Products Title',
+					'label' 		=> __( 'Popular Products Title', 'woocommerce-lab' ),
+					'description' 	=> __( 'Popular Products Title', 'woocommerce-lab' ),
 					'section' 		=> 'sec_home_page',
 					'type' 			=> 'text'
 				)
@@ -259,8 +259,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_popular_max_num', array(
-					'label'			=> 'Popular Products Max Number',
-					'description'	=> 'Popular Products Max Number',
+					'label'			=> __( 'Popular Products Max Number', 'woocommerce-lab' ),
+					'description'	=> __( 'Popular Products Max Number', 'woocommerce-lab' ),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)
@@ -277,8 +277,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_popular_max_col', array(
-					'label'			=> 'Popular Products Max Columns',
-					'description'	=> 'Popular Products Max Columns',
+					'label'			=> __( 'Popular Products Max Columns', 'woocommerce-lab' ),
+					'description'	=> __( 'Popular Products Max Columns', 'woocommerce-lab' ),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)
@@ -297,8 +297,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_new_arrivals_title', array(
-					'label' 		=> 'New Arrivals Title',
-					'description' 	=> 'New Arrivals Title',
+					'label' 		=> __( 'New Arrivals Title', 'woocommerce-lab' ),
+					'description' 	=> __( 'New Arrivals Title', 'woocommerce-lab' ),
 					'section' 		=> 'sec_home_page',
 					'type' 			=> 'text'
 				)
@@ -315,8 +315,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_new_arrivals_max_num', array(
-					'label'			=> 'New Arrivals Max Number',
-					'description'	=> 'New Arrivals Max Number',
+					'label'			=> __( 'New Arrivals Max Number', 'woocommerce-lab' ),
+					'description'	=> __( 'New Arrivals Max Number', 'woocommerce-lab' ),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)
@@ -333,8 +333,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_new_arrivals_max_col', array(
-					'label'			=> 'New Arrivals Max Columns',
-					'description'	=> 'New Arrivals Max Columns',
+					'label'			=> __( 'New Arrivals Max Columns', 'woocommerce-lab' ),
+					'description'	=> __( 'New Arrivals Max Columns', 'woocommerce-lab' ),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)
@@ -353,8 +353,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_deal_title', array(
-					'label' 		=> 'Deal of the Week Title',
-					'description' 	=> 'Deal of the Week Title',
+					'label' 		=> __( 'Deal of the Week Title', 'woocommerce-lab' ),
+					'description' 	=> __( 'Deal of the Week Title', 'woocommerce-lab' ),
 					'section' 		=> 'sec_home_page',
 					'type' 			=> 'text'
 				)
@@ -371,7 +371,7 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_deal_show', array(
-					'label'			=> 'Show Deal of the Week?',
+					'label'			=> __( 'Show Deal of the Week?', 'woocommerce-lab' ),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'checkbox'
 				)
@@ -388,8 +388,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_deal', array(
-					'label'			=> 'Deal of the Week Product ID',
-					'description'	=> 'Product ID to Display',
+					'label'			=> __( 'Deal of the Week Product ID', 'woocommerce-lab' ),
+					'description'	=> __( 'Product ID to Display', 'woocommerce-lab' ),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)
@@ -408,8 +408,8 @@ function woocommerce_lab_customizer( $wp_customize ){
 
 			$wp_customize->add_control(
 				'set_blog_title', array(
-					'label' 		=> 'Blog Section Title',
-					'description' 	=> 'Blog Section Title',
+					'label' 		=> __( 'Blog Section Title', 'woocommerce-lab' ),
+					'description' 	=> __( 'Blog Section Title', 'woocommerce-lab' ),
 					'section' 		=> 'sec_home_page',
 					'type' 			=> 'text'
 				)

@@ -43,11 +43,14 @@ function woocommerce_lab_config()
 {
     register_nav_menus(
         array(
-            'woocommerce_main_menu' => "woocommerce_main_menu",
-            'woocommerce_footer_menu' => 'woocommerce_footer_menu'
+            'woocommerce_main_menu' => __( 'Woocommerce Main Menu', 'woocommerce-lab' ),
+            'woocommerce_footer_menu' =>  __( 'Woocommerce Footer Menu', 'woocommerce-lab' ),'woocommerce_footer_menu'
 
         )
     );
+	$textdomain = 'woocommerce-lab';
+	load_theme_textdomain( $textdomain, get_stylesheet_directory() . '/languages/' );
+	load_theme_textdomain( $textdomain, get_template_directory() . '/languages/' );
     // This theme is WooCommerce compatible, so we're adding support to WooCommerce
     add_theme_support('woocommerce', array(
         'thumbnail_image_width' => 255,
@@ -92,56 +95,74 @@ if (class_exists('WooCommerce')) {
 }
 
 /**
+ * Show cart contents / total Ajax
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_lab_woocommerce_header_add_to_cart_fragment' );
+
+function woocommerce_lab_woocommerce_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+
+	?>
+	<span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+	<?php
+	$fragments['span.items'] = ob_get_clean();
+	return $fragments;
+}
+
+
+/**
  * Registers a widget area.
  *
  * @link https://developer.wordpress.org/reference/functions/register_sidebar/
  *
  */
-add_action( 'widgets_init', 'fancy_lab_sidebars' );
-function fancy_lab_sidebars(){
+add_action( 'widgets_init', 'woocommerce_lab_sidebars' );
+function woocommerce_lab_sidebars(){
 	register_sidebar( array(
-		'name'			=> 'Fancy Lab Main Sidebar',
-		'id'			=> 'fancy-lab-sidebar-1',
-		'description'	=> 'Drag and drop your widgets here',
+		'name'			=> __( 'Woocommerce Lab Main Sidebar', 'woocommerce-lab' ),
+		'id'			=> 'woocommerce-lab-sidebar-1',
+		'description'	=> __( 'Drag and drop your widgets here', 'woocommerce-lab' ),
 		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
 		'after_widget'	=> '</div>',
 		'before_title'	=> '<h4 class="widget-title">',
 		'after_title'	=> '</h4>',
 	) );
-    register_sidebar( array(
-		'name'			=> 'Sidebar Shop',
-		'id'			=> 'fancy-lab-sidebar-shop',
-		'description'	=> 'Drag and drop your WooCommerce widgets here',
+	register_sidebar( array(
+		'name'			=> __( 'Sidebar Shop', 'woocommerce-lab' ),
+		'id'			=> 'woocommerce-lab-sidebar-shop',
+		'description'	=> __( 'Drag and drop your WooCommerce widgets here', 'woocommerce-lab' ),
 		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
 		'after_widget'	=> '</div>',
 		'before_title'	=> '<h4 class="widget-title">',
 		'after_title'	=> '</h4>',
 	) );	
-    register_sidebar( array(
-		'name'			=> 'Footer Sidebar 1',
-		'id'			=> 'fancy-lab-sidebar-footer1',
-		'description'	=> 'Drag and drop your widgets here',
+	register_sidebar( array(
+		'name'			=> __( 'Footer Sidebar 1', 'woocommerce-lab' ),
+		'id'			=> 'woocommerce-lab-sidebar-footer1',
+		'description'	=> __( 'Drag and drop your widgets here', 'woocommerce-lab' ),
 		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
 		'after_widget'	=> '</div>',
 		'before_title'	=> '<h4 class="widget-title">',
 		'after_title'	=> '</h4>',
 	) );
 	register_sidebar( array(
-		'name'			=> 'Footer Sidebar 2',
-		'id'			=> 'fancy-lab-sidebar-footer2',
-		'description'	=> 'Drag and drop your widgets here',
+		'name'			=> __( 'Footer Sidebar 2', 'woocommerce-lab' ),
+		'id'			=> 'woocommerce-lab-sidebar-footer2',
+		'description'	=> __( 'Drag and drop your widgets here', 'woocommerce-lab' ),
 		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
 		'after_widget'	=> '</div>',
 		'before_title'	=> '<h4 class="widget-title">',
 		'after_title'	=> '</h4>',
 	) );
 	register_sidebar( array(
-		'name'			=> 'Footer Sidebar 3',
-		'id'			=> 'fancy-lab-sidebar-footer3',
-		'description'	=> 'Drag and drop your widgets here',
+		'name'			=> __( 'Footer Sidebar 3', 'woocommerce-lab' ),
+		'id'			=> 'woocommerce-lab-sidebar-footer3',
+		'description'	=> __( 'Drag and drop your widgets here', 'woocommerce-lab' ),
 		'before_widget'	=> '<div id="%1$s" class="widget %2$s widget-wrapper">', 
 		'after_widget'	=> '</div>',
 		'before_title'	=> '<h4 class="widget-title">',
 		'after_title'	=> '</h4>',
-	) );	
+	) );			
 }
