@@ -5,7 +5,7 @@ Author: inbrackets
 Author URI: http://www.inbrackets.dev
 Description: Woocommerce Lab is a compatible WooCommerce theme made with WordPress. It is the best theme for you to sell anything online, beautifuly designed and fully responsive.
 Version: 1.0
-Text-domain: woocommerce-lab
+Text Domain: woocommerce-lab
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, translation-ready, blog, right-sidebar, sticky-post, threaded-comments
@@ -891,4 +891,211 @@ p, ul li a, .nav-links a, .nav-links span{
     .woocommerce ul.products li.product a img {
         width: 100%;
     }
+}
+/* WooCommerce Widgets */
+.woocommerce .shop-content .widget-wrapper{
+    margin: 0 0 2rem;
+    border-bottom: 1px solid #eee;
+    padding: 0 1em 2em 0;    
+}
+
+.woocommerce .shop-content .widget-wrapper h4{
+    padding: 0 0 0.7rem 0;
+}
+
+.woocommerce .shop-content .widget-wrapper > ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.woocommerce .shop-content .widget-wrapper > ul li ul{
+    list-style: none;
+}
+
+.woocommerce .shop-content .widget-wrapper ul li span,
+.woocommerce .shop-content .widget-wrapper ul li ul li span{
+    float: right;
+}
+
+
+/* General */
+
+embed, iframe, object {
+    max-width: 100%;
+}
+
+button, input, optgroup, select, textarea {
+    background-color: #F6F6F6;
+    padding: 5px 15px;
+    border: 1px solid #e2e2e2;  
+    max-width: 100%;  
+}
+
+a{
+    color: #d35758;
+}
+
+a:hover {
+    color: #af4142;
+    text-decoration: none;
+}
+
+p, ul li a, .nav-links a, .nav-links span{
+    font-size: 1.15rem;
+}
+
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+.gallery-caption {
+  display: block;
+  font-size: 0.71111em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+/* Media Queries */
+
+@media all and (max-width: 768px){
+    .woocommerce ul.products[class*="columns-"] li.product, 
+    .woocommerce-page ul.products[class*="columns-"] li.product {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 767px) {
+
+    .woocommerce .col2-set .col-1,
+    .woocommerce .col2-set .col-2{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .footer-widgets .col-12{
+        margin-bottom: 25px;
+    } 
+
+    .footer-widgets .col-12:last-child{
+        margin-bottom: 0;
+    } 
 }

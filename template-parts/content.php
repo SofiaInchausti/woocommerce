@@ -20,7 +20,8 @@
 		?>
 	</div>
 	<div class="meta">
-		<p><?php esc_html_e( 'Published by', 'fancy-lab' ); ?> <?php the_author_posts_link(); ?> <?php esc_html_e( 'on', 'fancy-lab' ); ?> <?php echo esc_html( get_the_date() ); ?>
+		<p><?php esc_html_e( 'Published by', 'fancy-lab' ); ?> <?php the_author_posts_link(); ?> <?php esc_html_e( 'on', 'fancy-lab' ); ?> 
+		<a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date() ); ?></a>
 		<br />
 		<?php if( has_category() ): ?>
 			<?php esc_html_e( 'Categories', 'fancy-lab' ); ?>: <span><?php the_category( ' ' ); ?></span>
